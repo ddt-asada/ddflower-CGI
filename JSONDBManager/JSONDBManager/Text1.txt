@@ -1,0 +1,14 @@
+{
+	"email":{
+            "value": "sample@ddt.com"
+    },
+    "adminBlogTitle": {
+            "value": "ä«óùé“ÉuÉçÉO"
+    },
+    "allowMidnightMail": {
+            "value": "allow"
+    },
+    "recieveMailType": {
+    	"value":["alert","claim"]
+    }
+}
