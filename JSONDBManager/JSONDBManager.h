@@ -144,8 +144,17 @@ public:
 							std::string findKey = itr->first;
 							//置換対象の文字列を取得できていたら。
 							if (query.find("'" + findKey + "'") != std::string::npos) {
-								//置換対象のキー名を取得。
-								query.replace(query.find("'" + findKey + "'") + 1, findKey.length(), replaceValue);
+								//置換対象のキー名を全て置き換える。
+								auto finditr = query.begin();
+								for (int i = 0;;) {
+									i = query.find("'" + findKey + "'", i);
+									if (i != -1) {
+										query.replace(i + 1, findKey.length(), replaceValue);
+									}
+									else {
+										break;
+									}
+								}
 							}
 						}
 					}
